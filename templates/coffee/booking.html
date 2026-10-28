@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Бронь — Roast & Co{% endblock %}
+{% block styles %}<link rel="stylesheet" href="/static/css/coffee.css">{% endblock %}
+{% block content %}
+<section class="form-page">
+    <h1>Забронировать столик</h1>
+
+    {% if submitted %}
+        <div class="success">
+            <h3>Отлично, {{ name }}!</h3>
+            <p>Столик <strong>{{ table }}</strong> успешно забронирован. Ждём вас!</p>
+        </div>
+        <a href="/coffee" class="btn">На главную</a>
+    {% else %}
+        <form method="post" class="booking-form">
+            <div class="hall-map">
+                <h2>Выберите столик</h2>
+                <div class="map-grid">
+                    {% for i in range(1, 9) %}
+                    <input type="radio" name="table" id="table{{ i }}" value="Стол {{ i }}" class="hidden-radio" required>
+                    <label for="table{{ i }}" class="table-card">
+                        <span class="table-icon">🪑</span>
+                        <span class="table-name">Стол {{ i }}</span>
+                    </label>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="form-fields">
+                <label>Имя<input type="text" name="name" required placeholder="Ваше имя"></label>
+                <label>Телефон<input type="tel" name="phone" required placeholder="+7 ..."></label>
+                <button type="submit" class="btn">Забронировать</button>
+            </div>
+        </form>
+    {% endif %}
+</section>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Меню — Roast & Co{% endblock %}
+{% block styles %}<link rel="stylesheet" href="/static/css/coffee.css">{% endblock %}
+{% block content %}
+<header class="page-header">
+    <h1>Меню</h1>
+    <a href="/coffee" class="link-back">← На главную</a>
+</header>
+
+<section class="menu-list">
+    <div class="menu-item"><span>Эспрессо</span><span>180 ₽</span></div>
+    <div class="menu-item"><span>Американо</span><span>200 ₽</span></div>
+    <div class="menu-item"><span>Капучино</span><span>250 ₽</span></div>
+    <div class="menu-item"><span>Латте</span><span>280 ₽</span></div>
+    <div class="menu-item"><span>Флэт Уайт</span><span>290 ₽</span></div>
+    <div class="menu-item"><span>Раф</span><span>320 ₽</span></div>
+    <div class="menu-item"><span>Круассан</span><span>180 ₽</span></div>
+    <div class="menu-item"><span>Чизкейк</span><span>350 ₽</span></div>
+</section>
+{% endblock %}

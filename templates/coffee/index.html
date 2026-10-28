@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}Roast & Co — Кофейня{% endblock %}
+{% block styles %}<link rel="stylesheet" href="/static/css/coffee.css">{% endblock %}
+{% block content %}
+<header class="hero">
+    <div class="hero-grid">
+        <div class="hero-main">
+            <h1>Roast & Co</h1>
+            <p class="subtitle">Кофе, который согревает</p>
+            <a href="/coffee/booking" class="btn">Забронировать столик</a>
+            <p class="hero-stats">Более 500 довольных гостей</p>
+        </div>
+        <div class="hero-card-large">
+            <div class="hero-emoji">☕</div>
+            <p class="hero-card-title">Свежая обжарка каждое утро</p>
+            <p class="hero-card-text">Попробуйте наш авторский бленд</p>
+        </div>
+        <div class="hero-cards-row">
+            <div class="hero-card-small">
+                <div class="hero-emoji-small">🌱</div>
+                <p class="hero-small-title">Свой бленд</p>
+            </div>
+            <div class="hero-card-small">
+                <div class="hero-emoji-small">🛋️</div>
+                <p class="hero-small-title">Уютная атмосфера</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="featured">
+    <h2>Наши хиты</h2>
+    <div class="cards">
+        <div class="card">
+            <div class="card-emoji">☕</div>
+            <h3>Эспрессо</h3>
+            <p>Классика итальянского обжара, плотный и насыщенный.</p>
+            <span class="price">180 ₽</span>
+        </div>
+        <div class="card">
+            <div class="card-emoji">🥛</div>
+            <h3>Капучино</h3>
+            <p>Нежная молочная пена и идеальный баланс вкуса.</p>
+            <span class="price">250 ₽</span>
+        </div>
+        <div class="card">
+            <div class="card-emoji">🍂</div>
+            <h3>Латте</h3>
+            <p>Мягкий молочный вкус с лёгкой кофейной нотой.</p>
+            <span class="price">280 ₽</span>
+        </div>
+    </div>
+</section>
+
+<section class="about">
+    <h2>О нас</h2>
+    <div class="features">
+        <div class="feature">
+            <div class="feature-icon">🔥</div>
+            <h3>Своя обжарка</h3>
+            <p>Обжариваем зерно сами — свежесть гарантирована</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🛋️</div>
+            <h3>Уютная атмосфера</h3>
+            <p>Мягкие кресла, тёплый свет и приятная музыка</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">📶</div>
+            <h3>Быстрый Wi-Fi</h3>
+            <p>Работайте и учитесь в комфортных условиях</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-line"></div>
+    <p>ул. Кофейная, 12 · +7 (999) 123-45-67</p>
+    <p class="copyright">© 2026 Roast & Co. Все права защищены.</p>
+</footer>
+{% endblock %}

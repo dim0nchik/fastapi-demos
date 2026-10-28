@@ -1,0 +1,201 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; color: #1D3557; background: #F1FAEE; line-height: 1.6; }
+
+.hero {
+    padding: 80px 8%;
+    background: linear-gradient(135deg, #A8DADC 0%, #E8F1F2 50%, #FFFFFF 100%);
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-glow { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; pointer-events: none; }
+.glow-1 { width: 500px; height: 500px; background: radial-gradient(circle, #A8DADC 0%, transparent 70%); top: -100px; left: -100px; }
+.glow-2 { width: 400px; height: 400px; background: radial-gradient(circle, #457B9D 0%, transparent 70%); bottom: -80px; right: -80px; opacity: 0.25; }
+.glow-3 { width: 300px; height: 300px; background: radial-gradient(circle, #B8E0D2 0%, transparent 70%); top: 50%; right: 20%; opacity: 0.3; }
+
+.hero-content { text-align: center; max-width: 700px; position: relative; z-index: 1; }
+.avatar-wrapper { margin-bottom: 40px; }
+.avatar-circle {
+    width: 200px; height: 200px;
+    background: linear-gradient(135deg, #457B9D, #1D3557);
+    border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 5rem;
+    box-shadow: 0 20px 60px rgba(29,53,87,0.25);
+    transition: transform 0.3s ease;
+}
+.avatar-circle:hover { transform: scale(1.05); }
+
+.hero-content h1 { font-size: 3.2rem; margin-bottom: 20px; color: #1D3557; line-height: 1.2; font-weight: 700; }
+.hero-content .subtitle { font-size: 1.3rem; margin-bottom: 36px; color: #457B9D; font-weight: 500; }
+
+.btn {
+    display: inline-block; padding: 18px 44px;
+    background: #457B9D; color: #fff;
+    text-decoration: none; border-radius: 32px;
+    font-weight: 600; border: none; cursor: pointer;
+    transition: all 0.3s ease; font-size: 1.1rem;
+}
+.btn:hover { background: #1D3557; transform: translateY(-3px); box-shadow: 0 12px 28px rgba(29,53,87,0.32); }
+
+.benefits-strip {
+    display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap;
+    padding: 20px 32px; background: rgba(255,255,255,0.6); backdrop-filter: blur(10px);
+    border-radius: 16px; box-shadow: 0 8px 24px rgba(69,123,157,0.1);
+}
+.benefit-item { font-size: 1.05rem; font-weight: 600; color: #1D3557; white-space: nowrap; }
+.benefit-divider { color: #457B9D; font-size: 1.2rem; opacity: 0.6; }
+
+.services, .process, .form-page { padding: 80px 8%; }
+.services h2, .process h2, .form-page h1 { font-size: 2.5rem; margin-bottom: 48px; text-align: center; color: #1D3557; }
+
+.cards { display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; }
+.card {
+    flex: 1 1 280px; max-width: 340px; background: #fff; padding: 36px;
+    border-radius: 20px; box-shadow: 0 8px 28px rgba(69,123,157,0.12);
+    transition: all 0.3s ease;
+}
+.card:hover { transform: translateY(-8px); box-shadow: 0 14px 36px rgba(69,123,157,0.18); }
+.card h3 { color: #457B9D; margin-bottom: 14px; font-size: 1.4rem; }
+.card .price { display: block; margin-top: 20px; font-size: 1.6rem; font-weight: bold; color: #1D3557; }
+
+.steps { display: flex; gap: 36px; flex-wrap: wrap; justify-content: center; }
+.step { flex: 1 1 260px; max-width: 320px; text-align: center; }
+.step-number {
+    width: 64px; height: 64px;
+    background: linear-gradient(135deg, #457B9D, #1D3557); color: #fff;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 1.9rem; font-weight: bold; margin: 0 auto 20px;
+    box-shadow: 0 8px 24px rgba(69,123,157,0.22);
+}
+.step h3 { color: #1D3557; margin-bottom: 12px; font-size: 1.3rem; }
+
+/* Booking Specialists & Time Styles */
+.hidden-radio { display: none; }
+
+.specialists-block, .time-block { margin-bottom: 48px; }
+.specialists-block h2, .time-block h2 { font-size: 1.8rem; margin-bottom: 24px; color: #457B9D; text-align: center; }
+
+.spec-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    gap: 24px; 
+    max-width: 900px;   /* было 800px */
+    margin: 0 auto; 
+}
+.specialist-card {
+    background: #fff; border: 2px solid #A8DADC; border-radius: 20px;
+    padding: 32px 24px; text-align: center; cursor: pointer;
+    transition: all 0.3s ease; box-shadow: 0 6px 20px rgba(69,123,157,0.08);
+}
+.specialist-card:hover { transform: scale(1.04); box-shadow: 0 12px 32px rgba(69,123,157,0.16); }
+.spec-avatar { font-size: 3.5rem; margin-bottom: 16px; }
+.specialist-card h3 { color: #1D3557; margin-bottom: 8px; font-size: 1.3rem; }
+.spec-exp { color: #457B9D; font-size: 0.95rem; margin-bottom: 8px; font-weight: 600; }
+.spec-spec { color: #6B8E9E; font-size: 0.9rem; }
+.hidden-radio:checked + .specialist-card {
+    background: #E8F1F2; border-color: #457B9D;
+    transform: scale(1.04); box-shadow: 0 10px 28px rgba(69,123,157,0.2);
+}
+
+.time-grid { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; max-width: 700px; margin: 0 auto; }
+.time-card {
+    flex: 1; min-width: 160px;
+    background: #fff; border: 2px solid #A8DADC; border-radius: 16px;
+    padding: 20px; text-align: center; font-weight: 600; color: #1D3557;
+    cursor: pointer; transition: all 0.3s ease; font-size: 1.1rem;
+}
+.time-card:hover { background: #F1FAEE; transform: translateY(-3px); }
+.hidden-radio:checked + .time-card {
+    background: #457B9D; color: #fff; border-color: #1D3557;
+    transform: translateY(-3px); box-shadow: 0 8px 20px rgba(69,123,157,0.25);
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+}
+.form-fields label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    color: #457B9D;
+    font-size: 1rem;
+}
+.form-fields input {
+    padding: 14px 16px;
+    border: 2px solid #A8DADC;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-top: 8px;
+    width: 100%;
+    background: #fff;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+.form-fields input:focus {
+    outline: none;
+    border-color: #457B9D;
+    box-shadow: 0 0 0 4px rgba(69,123,157,0.15);
+}
+.form-fields .btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.form-page { 
+    max-width: 1000px;   /* было 600px */
+    margin: 0 auto; 
+    text-align: center; 
+    padding: 70px 24px;
+}
+.form-page .form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.form { display: flex; flex-direction: column; gap: 20px; text-align: left; width: 100%; }
+.form label { display: flex; flex-direction: column; font-weight: 600; color: #457B9D; font-size: 1rem; }
+.form input { padding: 14px 16px; border: 2px solid #A8DADC; border-radius: 10px; font-size: 1rem; margin-top: 8px; width: 100%; background: #fff; transition: all 0.3s ease; }
+.form input:focus { outline: none; border-color: #457B9D; box-shadow: 0 0 0 4px rgba(69,123,157,0.15); }
+.form .btn { width: 100%; text-align: center; margin-top: 8px; }
+.success { background: #B8E0D2; color: #1D3557; padding: 32px; border-radius: 12px; margin-bottom: 28px; font-weight: 600; }
+.success h3 { font-size: 1.6rem; margin-bottom: 12px; }
+
+footer { background: #1D3557; color: #F1FAEE; text-align: center; padding: 40px 8% 30px; }
+.footer-line { width: 100px; height: 2px; background: #A8DADC; margin: 0 auto 20px; }
+.copyright { margin-top: 16px; opacity: 0.7; font-size: 0.9rem; }
+
+@media (max-width: 768px) {
+    .hero { padding: 60px 5%; min-height: auto; }
+    .hero-content h1 { font-size: 2.2rem; }
+    .avatar-circle { width: 160px; height: 160px; font-size: 4rem; }
+    .benefits-strip { flex-direction: column; gap: 12px; }
+    .benefit-divider { display: none; }
+    .cards, .steps { flex-direction: column; }
+    .spec-grid { grid-template-columns: 1fr; }
+}

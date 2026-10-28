@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}Психолог Анна{% endblock %}
+{% block styles %}<link rel="stylesheet" href="/static/css/psy.css">{% endblock %}
+{% block content %}
+<header class="hero">
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+    <div class="hero-glow glow-3"></div>
+    
+    <div class="hero-content">
+        <div class="avatar-wrapper">
+            <div class="avatar-circle">🌿</div>
+        </div>
+        
+        <h1>Помогу выйти из тревоги</h1>
+        <p class="subtitle">Бережный подход. Без осуждения.</p>
+        
+        <a href="/psy/booking" class="btn">Записаться на консультацию</a>
+        
+        <div class="benefits-strip">
+            <span class="benefit-item">✓ Онлайн и офлайн</span>
+            <span class="benefit-divider">•</span>
+            <span class="benefit-item">✓ Первая консультация — знакомство</span>
+            <span class="benefit-divider">•</span>
+            <span class="benefit-item">✓ 10+ лет опыта</span>
+        </div>
+    </div>
+</header>
+
+<section class="services">
+    <h2>Услуги</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>👤 Индивидуальная сессия</h3>
+            <p>60 минут работы один на один.</p>
+            <span class="price">4 000 ₽</span>
+        </div>
+        <div class="card">
+            <h3>👥 Парная терапия</h3>
+            <p>90 минут для пары.</p>
+            <span class="price">6 500 ₽</span>
+        </div>
+        <div class="card">
+            <h3> Онлайн-консультация</h3>
+            <p>Формат Zoom, 60 минут.</p>
+            <span class="price">3 500 ₽</span>
+        </div>
+    </div>
+</section>
+
+<section class="process">
+    <h2>Как проходит консультация</h2>
+    <div class="steps">
+        <div class="step">
+            <div class="step-number">1</div>
+            <h3>Запись</h3>
+            <p>Оставьте заявку — я свяжусь с вами в течение дня</p>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <h3>Онлайн-встреча</h3>
+            <p>Проводим сессию в Zoom в удобное время</p>
+        </div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <h3>Поддержка</h3>
+            <p>Между сессиями я на связи для ваших вопросов</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-line"></div>
+    <p>anna.psy@example.com · +7 (999) 765-43-21</p>
+    <p class="copyright">© 2026 Психолог Анна. Конфиденциальность гарантирована.</p>
+</footer>
+{% endblock %}

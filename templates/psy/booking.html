@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Запись — Психолог Анна{% endblock %}
+{% block styles %}<link rel="stylesheet" href="/static/css/psy.css">{% endblock %}
+{% block content %}
+<section class="form-page">
+    <h1>Запись на консультацию</h1>
+
+    {% if submitted %}
+        <div class="success">
+            <h3>Спасибо, {{ name }}!</h3>
+            <p>Вы записаны к специалисту <strong>{{ specialist }}</strong> на время: <strong>{{ time }}</strong>. Я свяжусь с вами в ближайшее время.</p>
+        </div>
+        <a href="/psy" class="btn">На главную</a>
+    {% else %}
+        <form method="post" class="booking-form">
+            <div class="specialists-block">
+                <h2>Выберите специалиста</h2>
+                <div class="spec-grid">
+                    <input type="radio" name="specialist" id="spec1" value="Анна Иванова" class="hidden-radio" required>
+                    <label for="spec1" class="specialist-card">
+                        <div class="spec-avatar">👩‍⚕️</div>
+                        <h3>Анна Иванова</h3>
+                        <p class="spec-exp">10 лет опыта</p>
+                        <p class="spec-spec">Тревожность, отношения</p>
+                    </label>
+
+                    <input type="radio" name="specialist" id="spec2" value="Михаил Петров" class="hidden-radio">
+                    <label for="spec2" class="specialist-card">
+                        <div class="spec-avatar">👨‍⚕️</div>
+                        <h3>Михаил Петров</h3>
+                        <p class="spec-exp">8 лет опыта</p>
+                        <p class="spec-spec">Стресс, выгорание</p>
+                    </label>
+
+                    <input type="radio" name="specialist" id="spec3" value="Елена Смирнова" class="hidden-radio">
+                    <label for="spec3" class="specialist-card">
+                        <div class="spec-avatar">👩‍⚕️</div>
+                        <h3>Елена Смирнова</h3>
+                        <p class="spec-exp">12 лет опыта</p>
+                        <p class="spec-spec">Семейная терапия</p>
+                    </label>
+                </div>
+            </div>
+
+            <div class="time-block">
+                <h2>Удобное время</h2>
+                <div class="time-grid">
+                    <input type="radio" name="time" id="time1" value="Утро (10:00 - 13:00)" class="hidden-radio" required>
+                    <label for="time1" class="time-card">🌅 Утро</label>
+
+                    <input type="radio" name="time" id="time2" value="День (13:00 - 17:00)" class="hidden-radio">
+                    <label for="time2" class="time-card">☀️ День</label>
+
+                    <input type="radio" name="time" id="time3" value="Вечер (17:00 - 20:00)" class="hidden-radio">
+                    <label for="time3" class="time-card">🌆 Вечер</label>
+                </div>
+            </div>
+
+            <div class="form-fields">
+                <label>Имя<input type="text" name="name" required placeholder="Ваше имя"></label>
+                <label>Телефон<input type="tel" name="phone" required placeholder="+7 ..."></label>
+                <button type="submit" class="btn">Записаться</button>
+            </div>
+        </form>
+    {% endif %}
+</section>
+{% endblock %}
